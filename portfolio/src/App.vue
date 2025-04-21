@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
@@ -13,16 +12,16 @@ import HelloWorld from './components/HelloWorld.vue'
     <div class="collapse navbar-collapse justify-content-end questrial" id="navbarText">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <RouterLink class="nav-link" to="/">Home</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About Me</a>
+          <RouterLink class="nav-link" to="/about">About</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Current Research</a>
+          <RouterLink class="nav-link" to="/service">Service</RouterLink>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <RouterLink class="nav-link" to="/contact">Contact</RouterLink>
         </li>
       </ul>
     </div>
@@ -47,5 +46,8 @@ nav {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+nav a {
+  text-decoration: none;
 }
 </style>
